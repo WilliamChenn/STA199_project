@@ -1,0 +1,8 @@
+---
+title: "Team William"
+subtitle: "STA 199 Project"
+format: html
+editor: visual
+---
+
+Our research is focused on an analysis of COVID-19 death rates in the United States, with a specific focus on age and sex demographics. Utilizing data from the CDC's National Center for Health Statistics, our research covers all 50 states and the District of Columbia, meticulously accounting for weekly COVID-19 deaths. The research is centered around the hypothesis that older age groups and females have higher death rates. We utilize statistical methodologies, including linear regression models and the Akaike Information Criterion(AIC), to examine the impact of these demographic factors on COVID-19 mortality rates. Our findings reveal a nuanced relationship between age, sex, and COVID-19 deaths. The analysis demonstrates that age is a more significant predictor of COVID-19 deaths than sex is, with a noticeable increase in mortality rates in older age groups. However, while minimally effective, males do indeed showcase higher mortality rates compared to females. Furthermore, the interaction between age and gender also play a crucial role, indicating varying impacts across different demographic segments. We also discuss potential limitations and suggestions for future research, contributing valuable insights to the understanding of the COVID-19 pandemic's dynamics and its differential impact across various demographic groups.

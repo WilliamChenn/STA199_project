@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Covid-19 Report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Team William</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./proposal.html" rel="" target="">
+ <span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./presentation.pdf" rel="" target="">
+ <span class="menu-text">Presentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./report.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Report</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction-and-data" id="toc-introduction-and-data" class="nav-link active" data-scroll-target="#introduction-and-data">Introduction and data</a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review">Literature Review</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#workflow-formatting" id="toc-workflow-formatting" class="nav-link" data-scroll-target="#workflow-formatting">Workflow + Formatting</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Covid-19 Report</h1>
+<p class="subtitle lead">Report</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction-and-data" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-and-data">Introduction and data</h2>
+<p><span class="citation" data-cites="shanks2012">(<a href="#ref-shanks2012" role="doc-biblioref">Shanks and Brundage 2012</a>)</span></p>
+<p>The global outbreak of COVID-19 has created a need for comprehensive data to understand the impact that the virus held. This research seeks to uncover the patterns of Covid-19 related mortality in the United States in correlation with demographic factors, specifically age and gender. We decided to delve deeper into specifically age and gender due to historical trends related to mortality rates on previous infectious diseases. For example, the National Library of medicine points to the Spanish Flu of 1918 in which an interesting W shape emerged in regards to mortality rates. Expectingly, older individuals with lower immunity systems had a higher mortality rate than the average at around 0.5%. However, surprisingly the highest mortality rates actually were held by the young adult demographic around 1%, doubling the older generation. This interesting pattern motivated us to delve deeper into age for Covid-19 deaths as well. The Library also mentions that gender is another factor often studied as many viruses appear to interact with different genders’ bodies differently. This concept also motivated our group to delve deeper into understanding if gender played a significant role in the mortality rates for COVID-19.</p>
+<p>Our data is sourced from the CDC’s National Center for Health Statistics (NCHS, 2023). The data was collected and updated every week and covers information within all 50 states of the USA and the District of Columbia. The data counts the number of COVID-19 deaths are based on data stored in the National Vital Statistic System. These observations are then added every week. Each Observation of the dataset represents the count of Covid-19 death in a given week, state, specific age group, and sex. So for every single week, there will be an observation for every combination of every subgroup (state, age, group, and sex). The data is sourced from the CDC’s National Center for Health Statistics (NCHS, 2023). Our research question is: What is the relationship between age groups and COVID-19 mortality rates in the United States over time, and how have these rates evolved from the start of the pandemic until June 28, 2023? This research question allows us to see how Covid-19 mortality rates have changed over time among different age groups which helps us better understand the dynamic of the virus and how the pandemic potentially evolve. The research topic will be to observe trends in COVID-19 deaths given different geographic groups and how these trends evolve over time. We believe that older age groups will have higher mortality rate compared to the rest of the demographic. We also hypothesize that the mortality rates for women will be greater than those for men. The types of variables in my research question include both Categorical and quantitative. Age in this context would be categorical because we are grouping age together and looking at specific age groups. The number of deaths in each observation is Quantitative. Sex and date are all categorical.</p>
+<p>Given the nature of health data, it is essential to acknowledge and address potential ethical considerations. The data used in this dataset is anonymized and aggregate, which adheres to the highest standard of privacy. This allows the overarching goal of valuable significant insights while respecting the confidentiality of individuals involved in the dataset.</p>
+</section>
+<section id="literature-review" class="level2">
+<h2 class="anchored" data-anchor-id="literature-review">Literature Review</h2>
+<p>In the paper, “Role of Sex and Age in Fatal Outcomes of COVID-19: Women and Older Centenarians Are More Resilient,” Caruso et al.&nbsp;analyzes the role of age and sex in the fatal outcome of COVID-19, addressing three questions: (1) whether women have been more resilient than men to the virus, (2) whether centenarians have a lower mortality rate than other older people, and (3) if older centenarians born before 1919 are more resistant to SARS-CoV-2 compared to younger centenarians. The research finds that women are generally more resilient to COVID-19 compared to men, and even stated that men have found to have twice the mortality rate compared to women. The paper found that centenarians didn’t necessarily have lower mortality rate compared to the rest of the population. Finally paper also found that Centenarians who were born before 1919 seemed more resilient compared to other centenarians. Our research question builds on to this article by also analyzing the varibility of mortality rates given different sexes, but by also looking at how these mortality rates vary across different age groups alongside different sexes. Our reserach question will add another layer to the article by analyzing specific age groups of different sexes rather than just looking at the general different genders. <span class="citation" data-cites="caruso2023">(<a href="#ref-caruso2023" role="doc-biblioref">Caruso et al. 2023</a>)</span></p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<p>In order to explore the effects of age and sex with regards to Covid-19 mortality rates, we first conducted exploratory data analysis to help us visualize and better understand our data. In our analysis, we decided to specifically analyze the variables <code>End Week</code>, <code>Sex</code>, <code>Age Group</code>, and <code>COVID-19 Deaths</code> as these variables are directly related to our research question and objectives. We then cleaned and modified the data to help us better fit our models. We then calculated p-value to test our hypothesis that males and females have different mortality rates and that older people have higher mortality compared to younger people. Next, we employed a linear regression models to assess the impact of sex and gender on COVID-19 mortality rates. To further refine our analysis, we created a new dataset excluding the “All Sex” and “All Age” categories, enabling us to consider both age and sex as predictors without redundancy. Using this dataset, we applied the Akaike Information Criterion (AIC) model selection method to see which predictors would be useful in the model.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 6552 Columns: 8
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (5): Data as of, State, End Week, Sex, Age Group
+dbl (3): MMWR Week, Total Deaths, COVID-19 Deaths
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<section id="data-manipulation" class="level4">
+<h4 class="anchored" data-anchor-id="data-manipulation">Data Manipulation</h4>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2,002 × 8
+   `Data as of` State    `MMWR Week` `End Week` Sex   `Age Group` `Total Deaths`
+   &lt;chr&gt;        &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;
+ 1 06/28/2023   United …           1 01/04/2020 All … Under 1 ye…            403
+ 2 06/28/2023   United …           1 01/04/2020 All … 1-4 Years               79
+ 3 06/28/2023   United …           1 01/04/2020 All … 5-14 Years              99
+ 4 06/28/2023   United …           1 01/04/2020 All … 15-24 Years            605
+ 5 06/28/2023   United …           1 01/04/2020 All … 25-34 Years           1261
+ 6 06/28/2023   United …           1 01/04/2020 All … 35-44 Years           1771
+ 7 06/28/2023   United …           1 01/04/2020 All … 45-54 Years           3284
+ 8 06/28/2023   United …           1 01/04/2020 All … 55-64 Years           7936
+ 9 06/28/2023   United …           1 01/04/2020 All … 65-74 Years          11789
+10 06/28/2023   United …           1 01/04/2020 All … 75-84 Years          14546
+# ℹ 1,992 more rows
+# ℹ 1 more variable: `COVID-19 Deaths` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Because the dataset contains all possible combinations of sex and age groups given a specific end week, we decided make two sub Datasets to allow us to separately analyze ages and sex.</p>
+<ul>
+<li><p>covidData_Ages drops all observations with “All Ages,” which includes all ages in each observation, which would not allow us to visualize the relationship between COVID-19 deaths and specific age groups. Furthermore, we filtered the dataset to only include the Sex of “All Sex” because it already includes both the female and male data(Female data + male data = All Set Data). If we included the separate female and male observations, then the data would overlap.</p></li>
+<li><p>covidData_sex drops all observations with “All Sex,” which includes all sexes in each obersvation, which again, wouldn’t allow us to visualize relationships between deaths and specific sexes. Then, we also filtered the dataset to include only “All Ages” observations it already includes all age groups. If we included the all the separate age group observations alongside “All ages”, then the data would overlap.</p></li>
+</ul>
+</section>
+<section id="eda" class="level4">
+<h4 class="anchored" data-anchor-id="eda">EDA</h4>
+<p>After Data Manipulation, we were able to graph our box plot visualization of the COVID-19 Deaths and each age group.</p>
+<section id="boxplot-comparing-mortality-rates-across-age-groups" class="level5">
+<h5 class="anchored" data-anchor-id="boxplot-comparing-mortality-rates-across-age-groups">BoxPlot comparing mortality rates across age groups</h5>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/boxplotwithageanddeath-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>From our visualization, we can conclude that that the median of COVID-19 Deaths of those 85 years and over is the highest. This trend stays mostly consistent throughout: as the age group increases, the median number of COVID-19 Deaths increase.</p>
+<p>We also created a bar plot to compare difference between total COVID-19 related deaths between women and men with the changed dataset.</p>
+</section>
+<section id="bar-plot-comparing-women-and-men-mortality" class="level5">
+<h5 class="anchored" data-anchor-id="bar-plot-comparing-women-and-men-mortality">Bar Plot comparing women and men mortality</h5>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/barPlot-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The barplot showing the relationship between total deaths of males compared to females illustrates a higher number of deaths among males.</p>
+</section>
+<section id="graphs-regarding-trends-over-time" class="level5">
+<h5 class="anchored" data-anchor-id="graphs-regarding-trends-over-time">Graphs regarding trends over time</h5>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/overTime, by gender-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The line plot showing the relationship between Covid-19 deaths of males compared to females illustrates consistently higher number of deaths among males over time.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/overTime, by age group-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The line plot showing the relationship between covid-19 deaths of age groups illustrates consistently higher number of deaths among older age groups.</p>
+</section>
+</section>
+<section id="model-selection" class="level4">
+<h4 class="anchored" data-anchor-id="model-selection">Model Selection</h4>
+<p>We selected linear regression as our statistical model. This is because our response variable is a numerical value. Specifically, our goal was to use the model to understand how age and sex are associated with the number of COVID-19 deaths. Linear regression is good for our goal because it allows us to quantify the association between these categorical explanatory variables and our continuous outcome variable.</p>
+<p><strong>Model Construction:</strong> We first constructed separate linear regression models for each explanatory variable – one for age groups and one for sex. This allowed us to isolate the impact of each factor on COVID-19 mortality rates.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "R squared value of sex model: 0.00992005002448675"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "R squared value of age group model: 0.356314693625223"</code></pre>
+</div>
+</div>
+<ol type="1">
+<li><p><strong>Sex Model (R² = 0.0099):</strong></p>
+<ul>
+<li>This R² value suggests that approximately 0.99% of the variability in COVID-19 death counts can be explained by the sex of the individuals.</li>
+<li>A low R² like this indicates that sex alone does not strongly predict the number of COVID-19 deaths. This means that while there may be some difference in COVID-19 deaths between males and females, sex is not a major determinant in the variability of death counts.</li>
+<li>This finding implies that other factors, not included in this model, play a more significant role in determining COVID-19 mortality rates.</li>
+</ul></li>
+<li><p><strong>Age Group Model (R² = 0.356):</strong></p>
+<ul>
+<li><p>An R² value of 35.6% means that about 35.6% of the variation in COVID-19 deaths can be explained by the age group variable.</p></li>
+<li><p>This is a more substantial proportion compared to the sex model, meaning that age group is a more significant predictor of COVID-19 deaths than sex.</p></li>
+<li><p>The higher R² value here indicates that as one moves across different age groups, the variation in COVID-19 death counts changes more noticeably than it does between different sexes.</p></li>
+<li><p>However, an R² of 0.356 also means that a significant portion of the variability (around 64.4%) is still unexplained by the age group variable alone.</p></li>
+</ul></li>
+</ol>
+<p>We then utilize an AIC model to determine whether using both variables (age and sex) in conjunction with each other is more effective in predicting COVID-19 mortality rates than using them independently.</p>
+<p>First a new dataset is created to remove all the rows with “All Sex” and “All Age” groups. This way, we can introduce the AIC model to analyze both of the variables as predictors, which wouldn’t be accurate if we kept the “All Sex” and “All Age” groups.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4,004 × 8
+   `Data as of` State    `MMWR Week` `End Week` Sex   `Age Group` `Total Deaths`
+   &lt;chr&gt;        &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt; &lt;chr&gt;                &lt;dbl&gt;
+ 1 06/28/2023   United …           1 01/04/2020 Male  Under 1 ye…            214
+ 2 06/28/2023   United …           1 01/04/2020 Male  1-4 Years               42
+ 3 06/28/2023   United …           1 01/04/2020 Male  5-14 Years              51
+ 4 06/28/2023   United …           1 01/04/2020 Male  15-24 Years            445
+ 5 06/28/2023   United …           1 01/04/2020 Male  25-34 Years            888
+ 6 06/28/2023   United …           1 01/04/2020 Male  35-44 Years           1127
+ 7 06/28/2023   United …           1 01/04/2020 Male  45-54 Years           2020
+ 8 06/28/2023   United …           1 01/04/2020 Male  55-64 Years           4801
+ 9 06/28/2023   United …           1 01/04/2020 Male  65-74 Years           6736
+10 06/28/2023   United …           1 01/04/2020 Male  75-84 Years           7451
+# ℹ 3,994 more rows
+# ℹ 1 more variable: `COVID-19 Deaths` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "AIC value of additive model: 60474.2465786514"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "AIC value of interaction model: 60423.7870450313"</code></pre>
+</div>
+</div>
+<p>Since the AIC of the interaction model is lower, it indicates that there is an interaction between <strong><code>Age Group</code></strong> and <strong><code>Sex</code></strong> that is important in predicting COVID-19 deaths.</p>
+<p>Now, we will compare AIC scores using an interaction model to determine whether using both variables (age and sex) in conjunction with each other provides a more effective model for predicting COVID-19 mortality rates than using them independently. We will use the Step AIC to help us evaluate whether adding an interaction term between age and sex improves the model compared to a simpler additive model that only considers the main effects of age and sex.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Start:  AIC=49122.25
+`COVID-19 Deaths` ~ `Age Group`
+
+       Df Sum of Sq       RSS   AIC
++ Sex   1   3139920 844399899 49109
+&lt;none&gt;              847539819 49122
+
+Step:  AIC=49109.39
+`COVID-19 Deaths` ~ `Age Group` + Sex
+
+                  Df Sum of Sq       RSS   AIC
++ `Age Group`:Sex 10  14729170 829670729 49059
+&lt;none&gt;                         844399899 49109
+
+Step:  AIC=49058.93
+`COVID-19 Deaths` ~ `Age Group` + Sex + `Age Group`:Sex</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = `COVID-19 Deaths` ~ `Age Group` + Sex + `Age Group`:Sex, 
+    data = newAgeSex)
+
+Coefficients:
+                         (Intercept)                `Age Group`15-24 Years  
+                             0.70330                               5.98352  
+              `Age Group`25-34 Years                `Age Group`35-44 Years  
+                            25.41758                              62.17033  
+              `Age Group`45-54 Years                 `Age Group`5-14 Years  
+                           141.42308                               0.63187  
+              `Age Group`55-64 Years                `Age Group`65-74 Years  
+                           337.03297                             570.49451  
+              `Age Group`75-84 Years          `Age Group`85 Years and Over  
+                           717.50549                             944.03297  
+             `Age Group`Under 1 year                               SexMale  
+                             0.55495                               0.09890  
+      `Age Group`15-24 Years:SexMale        `Age Group`25-34 Years:SexMale  
+                             3.02198                              15.27473  
+      `Age Group`35-44 Years:SexMale        `Age Group`45-54 Years:SexMale  
+                            38.73626                             106.48901  
+       `Age Group`5-14 Years:SexMale        `Age Group`55-64 Years:SexMale  
+                            -0.02747                             197.43956  
+      `Age Group`65-74 Years:SexMale        `Age Group`75-84 Years:SexMale  
+                           258.33516                             194.54945  
+`Age Group`85 Years and Over:SexMale       `Age Group`Under 1 year:SexMale  
+                          -198.97253                               0.14286  </code></pre>
+</div>
+</div>
+<div class="cell" data-label="comparingAdjustedRSquared">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Adjusted R-squared for Sex model: 0.00718502253836661"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Adjusted R-squared for Age Group model: 0.353081718706214"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Adjusted R-squared for Age Group and Sex Interaction model: 0.354517007785536"</code></pre>
+</div>
+</div>
+<p>Because the AIC is lower for models with the two predictors ‘Age Group’ and ‘Sex’, compared to the model with only the ‘Age Group’ model, then the model with both predictors is better-fitting because AIC rewards models that provide a good fit to the data.</p>
+<p>Moreover, when comparing adjusted R-Squared values, the interaction model offers a slight improvement over the <strong><code>Age Group</code></strong> model alone. This suggests that considering both age and sex, along with their interaction, provides a more comprehensive understanding of the factors influencing COVID-19 mortality rates.</p>
+<div class="cell" data-lebel="linearModel with both">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 22 × 5
+   term                         estimate std.error statistic  p.value
+   &lt;chr&gt;                           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+ 1 (Intercept)                     0.703      33.8    0.0208 9.83e- 1
+ 2 `Age Group`15-24 Years          5.98       47.8    0.125  9.00e- 1
+ 3 `Age Group`25-34 Years         25.4        47.8    0.531  5.95e- 1
+ 4 `Age Group`35-44 Years         62.2        47.8    1.30   1.94e- 1
+ 5 `Age Group`45-54 Years        141.         47.8    2.96   3.14e- 3
+ 6 `Age Group`5-14 Years           0.632      47.8    0.0132 9.89e- 1
+ 7 `Age Group`55-64 Years        337.         47.8    7.04   2.20e-12
+ 8 `Age Group`65-74 Years        570.         47.8   11.9    3.17e-32
+ 9 `Age Group`75-84 Years        718.         47.8   15.0    1.74e-49
+10 `Age Group`85 Years and Over  944.         47.8   19.7    9.66e-83
+# ℹ 12 more rows</code></pre>
+</div>
+</div>
+<span class="math display">\[\begin{gather*}
+\widehat{\text{COVID-19 Deaths}} = 0.70330 \\
++ 5.98352 \cdot \text{AgeGroup}_{15-24} + 25.41758 \cdot \text{AgeGroup}_{25-34} \\
++ 62.17033 \cdot \text{AgeGroup}_{35-44} + 141.42308 \cdot \text{AgeGroup}_{45-54} \\
++ 0.63187 \cdot \text{AgeGroup}_{5-14} + 337.03297 \cdot \text{AgeGroup}_{55-64} \\
++ 570.49451 \cdot \text{AgeGroup}_{65-74} + 717.50549 \cdot \text{AgeGroup}_{75-84} \\
++ 944.03297 \cdot \text{AgeGroup}_{85+} + 0.55495 \cdot \text{AgeGroup}_{&lt;1} \\
++ 0.09890 \cdot \text{Gender} + 3.02198 \cdot \text{AgeGroup}_{15-24} \cdot \text{Gender} \\
++ 15.27473 \cdot \text{AgeGroup}_{25-34} \cdot \text{Gender} + 38.73626 \cdot \text{AgeGroup}_{35-44} \cdot \text{Gender} \\
++ 106.48901 \cdot \text{AgeGroup}_{45-54} \cdot \text{Gender} - 0.02747 \cdot \text{AgeGroup}_{5-14} \cdot \text{Gender} \\
++ 197.43956 \cdot \text{AgeGroup}_{55-64} \cdot \text{Gender} + 258.33516 \cdot \text{AgeGroup}_{65-74} \cdot \text{Gender} \\
++ 194.54945 \cdot \text{AgeGroup}_{75-84} \cdot \text{Gender} - 198.97253 \cdot \text{AgeGroup}_{85+} \cdot \text{Gender} \\
++ 0.14286 \cdot \text{AgeGroup}_{&lt;1} \cdot \text{Gender}\\\\
+\text{Gender} =
+\begin{cases}
+1 &amp; \text{if Male} \\
+0 &amp; \text{if Female}
+\end{cases}
+\end{gather*}\]</span>
+<p><strong>Table of coefficients for easier visualization:</strong></p>
+<table class="table">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 13%">
+<col style="width: 34%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Coefficient</th>
+<th>Term</th>
+<th>Coefficient</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intercept</td>
+<td>0.70330</td>
+<td>Age Group 55-64 Years</td>
+<td>337.03297</td>
+</tr>
+<tr class="even">
+<td>Age Group 15-24 Years</td>
+<td>5.98352</td>
+<td>Age Group 65-74 Years</td>
+<td>570.49451</td>
+</tr>
+<tr class="odd">
+<td>Age Group 25-34 Years</td>
+<td>25.41758</td>
+<td>Age Group 75-84 Years</td>
+<td>717.50549</td>
+</tr>
+<tr class="even">
+<td>Age Group 35-44 Years</td>
+<td>62.17033</td>
+<td>Age Group 85 Years and Over</td>
+<td>944.03297</td>
+</tr>
+<tr class="odd">
+<td>Age Group 45-54 Years</td>
+<td>141.42308</td>
+<td>Age Group Under 1 year</td>
+<td>0.55495</td>
+</tr>
+<tr class="even">
+<td>Age Group 5-14 Years</td>
+<td>0.63187</td>
+<td>Sex Male</td>
+<td>0.09890</td>
+</tr>
+<tr class="odd">
+<td>Age Group 15-24 Years:Sex Male</td>
+<td>3.02198</td>
+<td>Age Group 35-44 Years:Sex Male</td>
+<td>38.73626</td>
+</tr>
+<tr class="even">
+<td>Age Group 25-34 Years:Sex Male</td>
+<td>15.27473</td>
+<td>Age Group 45-54 Years:Sex Male</td>
+<td>106.48901</td>
+</tr>
+<tr class="odd">
+<td>Age Group 5-14 Years:Sex Male</td>
+<td>-0.02747</td>
+<td>Age Group 55-64 Years:Sex Male</td>
+<td>197.43956</td>
+</tr>
+<tr class="even">
+<td>Age Group 65-74 Years:Sex Male</td>
+<td>258.33516</td>
+<td>Age Group 75-84 Years:Sex Male</td>
+<td>194.54945</td>
+</tr>
+<tr class="odd">
+<td>Age Group 85 Years and Over:Sex Male</td>
+<td>-198.97253</td>
+<td>Age Group Under 1 year:Sex Male</td>
+<td>0.14286</td>
+</tr>
+</tbody>
+</table>
+<p>Interpreting the coefficients:</p>
+<ul>
+<li><p>Coefficients for older age groups are generally larger positive values which suggest an increase in COVID-19 deaths as age increases.</p></li>
+<li><p>The small coefficient for <strong><code>SexMale</code></strong> suggests a small increase in deaths for males over females when not considering age groups.</p></li>
+<li><p>Interaction coefficients shows how the effect of being male differs across age groups. For example, middle-aged groups (35-44, 45-54, etc.) show a significant increase in COVID-19 deaths for males, whereas the oldest group (85 and over) shows a decrease.</p></li>
+<li><p>The negative coefficient for the oldest age group’s interaction term could be interpreted as indicating that the difference in COVID-19 deaths between sexes becomes less pronounced or even reversed in the very old age groups.</p></li>
+</ul>
+<p>In essence, the model indicates that there is a significant interaction between <strong><code>Age Group</code></strong> and <strong><code>Sex</code></strong>. This means that the effect of <strong><code>Age Group</code></strong> on COVID-19 deaths is different for males and females, and thus it’s important to consider these variables together rather than separately. The lower AIC for the model including the interaction suggests it is a better fit for the data than the models without the interaction.</p>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>In our analysis regarding Covid-19, the major leading purpose was to determine the greatest factors that went into mortality rate. To do so, we looked at age and gender, both factors that have historically played a major role in understanding mortality rates for previous viruses. However, it is important to note that it would be unrealistic to expect an extremely high R^2 value since there are a plethora of reasons that go into mortality rate for any given virus. During our model selection process, we decided to use an interaction model between <code>Age Group</code> and <code>sex</code> to conduct our analysis. This is because both AIC values and adjusted R-squared values conclude that analyzing the variables rather than independently is preferable. Moreover, we chose an interactive model over an additive model for the same reason. Our model suggests that gender has minimal impact on Covid-19 mortality rates, while age appears to have a fairly significant impact. However, positive coefficients across age groups*male showcases that in most age groups, if the observation is a male the mortality rate increases. In essence, our results showcase that the effect of age group on deaths is difference for males and females, indicating that males have a slightly higher mortality rate compared to women. Again, positive coeffiecients across higher age group categories indicates that generally, the higher the age group an individual is in, the higher their mortality likelihood. Interestingly, we also observed that these trends are fairly consistent over time based off of our EDA. Our findings can be significant in terms of projecting Covid-19 deaths along with further research regarding viruses of similar nature. In addition, with waves of Covid-19 being expected to constantly arise, these findings would be applicable to further vaccine research as researchers can put a greater emphasis on uncovering treatments for older individuals rather than focusing on gender related treatments.</p>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>Our research question aimed to understand the relationship between COVID-19 deaths and demographic factors such as age and sex. We found that age is a more significant predictor of COVID-19 deaths than sex is. Furthermore, our EDA revealed a consistent increase in median COVID-19 deaths as the age groups increased, with the group age 85 and older displaying the highest median of deaths and the highest number of deaths over time. After analyzing sex as a predictor for our EDA, we observed that there was a higher number of deaths among males as compared to females consistently over time. These trends over time were explored through line plots, displaying consistently higher COVID-19 deaths among males and older age groups.&nbsp;</p>
+<p>Statistically, we employed linear regression models to help quantify the association between our predictors and the COVID-19 deaths. The R^2 values indicated that age group explained a substantial portion of the variability (35.6%) compared to gender alone, which had a lower R^2 of 0.99%. Furthermore, we employed model comparison utilizing Akaike Information Criterion (AIC which favored a model including both age group and sex, which suggested an interaction effect. The AIC for this model was lower than models considering just age and sex alone, indicating an interaction. Finally, coefficients from our final model revealed that the older age groups had larger positive coefficients, which indicates increased COVID-19 deaths with age. The interaction variables and terms demonstrated that the effect of age on COVID-19 deaths varies between sex, emphasizing the significance of considering both of these demographic factors together.&nbsp;</p>
+<p>While our conclusions provided significant insights to public health, we acknowledge limitations of our research. We did not dive into specific factors that could significantly impact COVID-19 deaths, such as health conditions, socioeconomic status, and country of collected dataset, which could have also contributed to the unexplained variability in the COVID-19 deaths. Specifically, our dataset only includes patients in the United States and District of Columbia, so we cannot generalize this data to the entire human population. Furthermore, there may have been underlying health conditions that significantly affected the health of those with COVID-19. Some suggestions for improvement could be that future studies could incorporate various significant health variables to enhance the model’s explanatory power, providing a more comprehensive understanding to the COVID-19 death determinants. Future studies could also explore health disparities and behavioral impacts(washing hands, social distancing, taking medicine, etc.) on COVID-19 deaths.&nbsp;</p>
+<p>Our data is considered both reliable and valid, as it adheres to high privacy standards as it is annonymized and aggregate, respecting individual confidentiality. Furthermore, our data is sourced from the CDC’s National Center for Health Statistics and is collected and updated every week, covering information within all 50 states of the USA and the District of Columbia. Some ethical consideration that we kept in mind was our use of anonymized and aggregate data. This allowed us to utilize the data set for our research while maintaining the confidentiality of all the patients in the database.&nbsp;</p>
+<p>In conclusion, our research enhances the understanding of COVID-19 death patterns, emphasizing the significance of age as a predictor and highlighting sex differences. Suggestions for improvement pave the way for future research to dive deeper into more factors influencing COVID-19 death rates.</p>
+</section>
+<section id="workflow-formatting" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-formatting">Workflow + Formatting</h2>
+<p>To earn full credit, please be mindful of the following:</p>
+<p>Have an updated <code>about</code> qmd for your project.</p>
+<p>Responded to / Closed all <em>issues</em> from your proposal from chosen data set.</p>
+<p>Your website must be able to be rendered by me and your lab leader prior to submission.</p>
+<p><strong>EVERYONE</strong> in your group must have at least 3 commits.</p>
+<p>Pipes %&gt;%, |&gt; and ggplot layers + should be followed by a new line.</p>
+<p>All binary operators should be surrounded by space. For example x + y is appropriate. x+y is not.</p>
+<p>All team members should contribute to the GitHub repository, with <strong>regular meaningful commits.</strong></p>
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-caruso2023" class="csl-entry" role="listitem">
+Caruso, Calogero, Gabriella Marcon, Giulia Accardi, Anna Aiello, Anna Calabrò, Mattia Emanuela Ligotti, Mauro Tettamanti, Claudio Franceschi, and Giuseppina Candore. 2023. <span>“Role of Sex and Age in Fatal Outcomes of COVID-19: Women and Older Centenarians Are More Resilient.”</span> <em>International Journal of Molecular Sciences</em> 24 (3): 2638. <a href="https://doi.org/10.3390/ijms24032638">https://doi.org/10.3390/ijms24032638</a>.
+</div>
+<div id="ref-shanks2012" class="csl-entry" role="listitem">
+Shanks, G. Dennis, and John F. Brundage. 2012. <span>“Pathogenic Responses Among Young Adults During the 1918 Influenza Pandemic.”</span> <em>Emerging Infectious Diseases</em> 18 (2): 201–7. <a href="https://doi.org/10.3201/eid1802.102042">https://doi.org/10.3201/eid1802.102042</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

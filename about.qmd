@@ -1,0 +1,13 @@
+---
+title: "About"
+format: html
+editor: visual
+---
+
+This project was developed by **\[Team William\]** For [STA 199: Introduction to Data Science](https://sta199-f23-2.github.io/) at Duke University. The team is comprised of the following team members.
+
+-   Brian Yoon: First year majoring in economics and statistical science(maybe).
+-   William Chen: First year majoring in computer science.
+-   Hannah Wang: First year majoring in computer science.
+-   Jerry Zhang: Sophomore majoring in ECE.
+-   ...

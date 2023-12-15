@@ -1,0 +1,182 @@
+---
+title: "Team William Project"
+subtitle: "Proposal"
+format: html
+editor: visual
+---
+
+```{r}
+#| label: load-pkgs
+#| message: false
+library(tidyverse)
+library(dplyr)
+library(tidymodels)
+```
+
+# Data 1
+
+## Introduction and data
+
+-   **Identify the source of the data.**
+
+    -   The data is sourced from the CDC's National Center for Health Statistics (NCHS).
+
+-   **State when and how it was originally collected (by the original data curator, not necessarily how you found the data).**
+
+    -   The data in this data set is collected and updated every week and covers information within all 50 states of the USA and the District of Columbia. The counts the number of COVID-19 deaths are based on data stored in the National Vital Statistic System. These observations are then added every week.
+
+-   **Write a brief description of the observations.**
+
+    -   Each Observation of the dataset represents the count of Covid-19 death in a given week, state, specific age group, and sex. So for every single week, there will be an observation for every combination of every subgroup (state, age, group, and sex).
+
+## Research question
+
+-   **Research Questions**
+
+    -   "What are the demographic and regional patterns of COVID-19 mortality in the United States, focusing on differences in death rates between age groups and sexes,?"
+
+    -   This research question is important because it provides insights into COVID-19's impact on different demographic groups, which can potentially help guide public health strategies, resource allocation and help idnetify and protect more vulnerable populations/demographics.
+
+    -   "What is the relationship between age groups and COVID-19 mortality rates in the United States over time, and how have these rates evolved from the start of the pandemic until June 28, 2023?"
+
+    -   This research question allows us to see how Covid-19 mortality rates have changed over time among different age groups which helps us better understand the dynamic of the virus and how the pandemic potentially evolve.
+
+-   **A description of the research topic along with a concise statement of your hypotheses on this topic.**
+
+    -   The research topic will be to observe trends in COVID-19 deaths given different geographic groups and how these trends evolve over time. A feasible hypothesis can be that those in older age groups will have higher mortality rate compared to the rest of the demographic.
+
+-   **Identify the types of variables in your research question. Categorical? Quantitative?**
+
+    -   The types of variables in my research question include both Categorical and quantitative. Age in this context would be categorical because we are grouping age together and looking at specific age groups. The number of deaths in each observation is Quantitative. Sex and date are all categorical.
+
+## Literature
+
+-   **Find one published credible article on the topic you are interested in researching.**
+
+    -   [*Role of Sex and Age in Fatal Outcomes of COVID-19: Women and Older Centenarians Are More Resilient*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9916733/#:~:text=A%20study%20on%20sex%20differences,50%E2%80%9369%20%5B12%5D.)
+
+-   **Provide a one paragraph summary about the article.**
+
+    -   This paper analyzes the role of age and sex in the fatal outcome of COVID-19, addressing three questions: (1) whether women have been more resilient than men to the virus, (2) whether centenarians have a lower mortality rate than other older people, and (3) if older centenarians born before 1919 are more resistant to SARS-CoV-2 compared to younger centenarians. The research finds that women are generally more resilient to COVID-19 compared to men, and even stated that men have found to have twice the mortality rate compared to women. The paper found that centenarians didn't necessarily have lower mortality rate compared to the rest of the population. Finally paper also found that Centenarians who were born before 1919 seemed more resilient compared to other centenarians.
+
+-   **In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.**
+
+    -   My research question builds on to this article by also analyzing the varibility of mortality rates given different sexes, but by also looking at how these mortality rates vary across different age groups alongside different sexes. My reserach question will add another layer to the article by analyzing specific age groups of different sexes rather than just looking at the general different genders.
+
+## Glimpse of data
+
+```{r}
+#| label: load-data-1
+covidData <- read_csv("data/Covid19Dataset.csv")
+glimpse(covidData)
+```
+
+# Data 2
+
+## Introduction and data
+
+-   Identify the source of the data.
+
+    -   The data is sources from data.world.
+
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+
+-   The original data was collected by CrossFit Headquarters (CFHQ). The data was made into a more comprehensible manner by a statistician named Sam Swift, which was then shrunk and posted on data.world by Brandon Gadoci.
+
+-   Write a brief description of the observations.
+
+-   Each observation represents an individual in the crossfit world with information including their region, gender, age along with their crossfit stats like their back squad max, 400m run time, and other lifts.
+
+## Research question
+
+-   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
+
+-   What is the relationship between gender and max back squad weights, and how does this relationship change in relation with age? Do men and women have similar prime years?
+
+-   What is the relationship between weight and height with max deadlift weight and which is a better indicator for estimating the max deadlift weight?
+
+-   A description of the research topic along with a concise statement of your hypotheses on this topic.
+
+-   The research topic would be relating gender and age to physical abilities in the field of cross fit. A viable hypothesis would be that the average male max back squad is higher than the average female max back squat. However, this gap would shrink for older individuals.
+
+-   Identify the types of variables in your research question. Categorical? Quantitative?
+
+-   There are both types of variables within my research question. Variables like gender and potentialy age (if viewed in a matter of ranges) would be categocial, while other variables like max back squad and deadlift would be quantitiative.
+
+## Literature
+
+-   Find one published credible article on the topic you are interested in researching. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7470362/
+
+-   Provide a one paragraph summary about the article. This article dives into looking at the difference in weight lifted for genders at various age ranges. It looked at individuals participating in Olympic weightlifting competitions only. It concluded that gender and body weight had little affect at younger ages as they all seemed to perform similarly. However, as boys hit their prime puberty years, it is noted that the gap begins to widen. They concluded that this analysis could be useful when attempting to understand an athlete's trajectory.
+
+-   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+-   Our research question builds on the article as it looks into a different category of athletes In addition, also looks into when each gender's prime tends to be along with if the gap remains large or begins to shrink in senior years for individuals. \## Glimpse of data
+
+```{r}
+#| label: load-data-2
+Athletes <- read_csv("data/Athletes.csv")
+glimpse(Athletes)
+```
+
+# Data 3
+
+## Introduction and data
+
+-   Identify the source of the data.
+
+    -   **California Safe Cosmetics Program in the California Department of Public Health**
+
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+
+    -   **The California Safe Cosmetics Act required manufacturers, packers, and distributors of cosmetic products in California to report ingredients linked to health risks(cancer, birth defects, or other reproductive risks). Companies with over \$1 million in annual cosmetic sales and products sold in California since January 1, 2007, must comply. The data includes product details, chemical information, and reporting dates submitted to the California Safe Cosmetics Program.**
+
+-   Write a brief description of the observations.
+
+    -   **Each observation is a product name sold in California containing any chemical ingredient associated with the health risks. Each company/manufacturers reported all their products that contained the ingredients, so it is possible for one company to report multiple products.**
+
+## Research question
+
+-   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
+
+    -   **"Are there chemicals more commonly associated with a specific product subcategory type?"**
+
+        -   **This question is important because it provides insight to which chemicals that are prevalent in certain product types, allowing us to understand what ingredients to look out for when purchasing the specific product subcategory. This allows consumers make more informed and cautious choices when purchasing.**
+
+    -   **"Which specific product subcategories are the most common to contain chemical ingredients across all companies?"**
+
+        -   **This question is important because it allows us to discern which product subcategories are prone to containing chemical ingredients associated with health risks. This way, we can exercise more caution in purchasing decisions or opt to avoid specific subcategories, given the common presence of such chemical ingredients.**
+
+    -   **"Which specific chemical ingredients are associated with each company/manufacturer?"**
+
+        -   **This questions allow us to understand which companies tend to include the chemical ingredients in their products. We can make informed purchasing choices with this information, such as avoiding to purchase from a specific company/manufacturer's.**
+
+-   A description of the research topic along with a concise statement of your hypotheses on this topic.
+
+    -   **The research topic will observe trends in chemical ingredients in products given the company/manufacturer, dates and specific product subcategories. A feasible hypothesis is that the Hair Dyes and Colors prroduct subcategory contains the most chemical ingredients across all subcategories. This is because hair dyes are known to contain a variety of chemical compounds, necessitating the use of protective gloves during application.**
+
+-   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    -   **The types of variables in my** **research question include both categorical and quantitative variables. The subcategories and companies are considered as categorical while the dates are considered quantitative.**
+
+## Literature
+
+-   Find one published credible article on the topic you are interested in researching.
+
+    -   [*Chemical Exposures: The Ugly Side of Beauty Products*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1253722/)
+
+-   Provide a one paragraph summary about the article.
+
+    -   **The article discusses the raised concerns about reproductive and developmental issues that are linked to the chemical ingredients found in personal and cosmetic products. The CDC's data highlights the increase in male reproductive problems over the past years, which could possibly be attributed to the chemicals. There have bee reports from different environmental organizations which emphasize the presence of potentially harmful chemicals in these products. Environmental organizations advocate for increased transparency in product ingredients allow consumers to make more informed purchasing choices. The organizations emphasizes the importance of providing resources and tools for individuals to make their purchase decisions, whether they are willing to accept the risk or not.**
+
+-   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    -   **My research builds on this article as it provides information and analyzing the various chemical ingredients found in popular products and big-name cosmetic companies that people are buying from worldwide. It sheds light on the prevalence of these harmful chemical ingredients, an issue that hasn't really received adequate public attention, resources, or information. My research questions build on this article by analyzing deeper into the specific subcategories and large companies that are universally bought from, aiming to identify which ones may carry a higher risk factor.**
+
+## Glimpse of data
+
+```{r}
+#| label: load-data-3
+cosmetics <- read_csv("data/cscpopendata.csv")
+glimpse(cosmetics)
+```
